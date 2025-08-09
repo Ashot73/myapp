@@ -4,21 +4,45 @@
     <title>Hello Page</title>
     <style>
         body {
-            background-color: white;
+            background-color: black; /* Ֆոնի գույն */
             color: red;
             text-align: center;
             font-family: Arial, sans-serif;
         }
         h2 {
-            color: yellow;
+            color: yellow; /* Վերնագրի գույն */
+            animation: fadeIn 2s ease-in-out; /* Անիմացիա */
         }
         .blue-text {
-            color: yellow;
+            color: cyan; /* Տեքստի գույն */
+            font-size: 20px;
+            animation: slideIn 3s ease-in-out; /* Անիմացիա */
+        }
+        img {
+            width: 200px;
+            height: auto;
+            margin-top: 20px;
+            animation: bounce 2s infinite; /* Ցատկող անիմացիա */
+        }
+        /* Անիմացիաներ */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        @keyframes slideIn {
+            from {transform: translateY(-50px); opacity: 0;}
+            to {transform: translateY(0); opacity: 1;}
+        }
+        @keyframes bounce {
+            0%, 100% {transform: translateY(0);}
+            50% {transform: translateY(-20px);}
         }
     </style>
 </head>
 <body>
     <h2>Hello from Ashot</h2>
     <div class="blue-text">www.new.com</div>
+    <img src="photo.jpg" alt="My Photo">
 </body>
 </html>
+
